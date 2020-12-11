@@ -1,0 +1,34 @@
+dnf update
+dnf info sshpass
+python3 -m pip install ansible
+python3 -m pip install argcomplete
+activate-global-python-argcomplete
+
+#create and edit with vim
+vim ansible.cfg
+
+#########################
+[defaults]
+
+#Inventory file location
+inventory = /root/ansible/hosts
+
+#Disable checking fingerprint checksum on the first connection to the remote host
+host_key_checking = false
+#########################
+
+
+
+mkdir ~/ansible
+touch ~/ansible/hosts
+
+#edit with vim
+vim ~/ansible/hosts
+#########################
+HOSTNAME ansible_host=IP_ADDR ansible_user=remadm ansible_password=PASSWORD
+HOSTNAME ansible_host=IP_ADDR ansible_user=root ansible_shh_private_key_file=/root/.ssh/SSH_PRIVATE_KEY
+#########################
+
+ansible all -m ping
+
+
