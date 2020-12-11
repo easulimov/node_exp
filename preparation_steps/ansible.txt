@@ -24,6 +24,7 @@ touch ~/ansible/hosts
 
 #edit with vim
 vim ~/ansible/hosts
+
 #########################
 HOSTNAME ansible_host=IP_ADDR ansible_user=remadm ansible_password=PASSWORD
 HOSTNAME ansible_host=IP_ADDR ansible_user=root ansible_shh_private_key_file=/root/.ssh/SSH_PRIVATE_KEY
